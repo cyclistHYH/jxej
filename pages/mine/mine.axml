@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="mineInfo">
+    <view class="avatarBox">
+      <image class="avatar" mode="scaleToFill" src="{{avatar}}"/>
+    </view>
+    <view class="mineInfoBox" a:if="{{!isLogin}}">
+      <view class="mineName">
+        <button class="loginBtn" open-type="getAuthorize" scope='userInfo' hover-class="none" plain="{{true}}" onGetAuthorize="toLogin">登录/注册</button>
+      </view>
+      <view class="mineInfoTxt">点击登录，享受更多信息</view>
+    </view>
+    <view class="mineInfoBox" a:else>
+      <view class="mineName">{{nickName}}</view>
+      <!-- <view class="mineInfoTxt">{{information}}</view> -->
+      <view class="mineInfoTxt">
+        <view class="dropOut" onTap="toOut">退出登录</view>
+      </view>
+    </view>
+  </view>
+  <view class="mineWelfare">
+    <navigator class="mineIntegral" hover-class="none" url="/pages/integral/integral">
+      <view class="mineIntegralTxt">我的积分 ></view>
+      <view class="mineIntegralNumber">{{integral}}</view>
+    </navigator>
+    <view class="mineWelfareNav">
+      <navigator class="mineWelfareBox" hover-class="none" url="/pages/welfare/welfare">
+        <image class="mineWelfareImg" src="/images/mineNavImg1.png"/>
+        <view class="mineWelfareTxt">签到领积分</view>
+        <view class="mineWelfareRemind" hidden="{{isQiandao==0?false:true}}">待领取</view>
+      </navigator>
+      <navigator class="mineWelfareBox" hover-class="none" url="/pages/coupon/coupon">
+        <image class="mineWelfareImg" src="/images/mineNavImg2.png"/>
+        <view class="mineWelfareTxt">我的优惠券</view>
+      </navigator>
+      <navigator class="mineWelfareBox" hover-class="none" url="/pages/getCoupon/getCoupon">
+        <image class="mineWelfareImg" src="/images/mineNavImg2.png"/>
+        <view class="mineWelfareTxt">领取优惠券</view>
+      </navigator>
+      <navigator class="mineWelfareBox" hover-class="none" url="/pages/security/security" hidden="{{delivery_staff==0?true:false}}">
+        <image class="mineWelfareImg" src="/images/mineNavImg4.png"/>
+        <view class="mineWelfareTxt">安保配送</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="mineNav">
+    <navigator class="mineNavBox" url="/pages/order/order" hover-class="none">
+      <view class="mineNavTxt">我的订单</view>
+      <image class="mineNavImg" src="/images/recommendArrow.png" />
+    </navigator>
+    <navigator class="mineNavBox" onTap="remind" url="/pages/groupDetails/groupDetails" hidden="{{true}}">
+      <view class="mineNavTxt">拼团订单</view>
+      <image class="mineNavImg" src="/images/recommendArrow.png" />
+    </navigator>
+    <navigator class="mineNavBox" url="/pages/address/address" hover-class="none">
+      <view class="mineNavTxt">我的地址</view>
+      <image class="mineNavImg" src="/images/recommendArrow.png" />
+    </navigator>
+    <contact-button icon="/images/serviceImg.jpg" size="682rpx*90rpx" tnt-inst-id="MYRAPSCN" scene="SCE00109315"/>
+  </view>
+</view>

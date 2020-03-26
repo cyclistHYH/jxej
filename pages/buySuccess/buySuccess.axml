@@ -1,0 +1,17 @@
+<view class="container">
+  <image  class="successImg" src="/images/successImg.jpg"/>
+  <view class="success">
+    <view class="orderId">
+      <view class="orderIdTxt">订单编号：</view>
+      <view class="orderIdNum">{{order.order_sn}}</view>
+    </view>
+    <view class="price">
+      <view class="priceTxt">总价</view>
+      <view class="priceNum">¥{{order.order_money}}</view> 
+    </view>
+  </view>
+  <view class="buttonBox">
+    <navigator class="look" url="/pages/orderDetails/orderDetails?id={{order.order_id}}" hover-class="none">查看订单</navigator>
+    <navigator class="continue" url="/pages/index/index" open-type="switchTab" hover-class="none">继续购物</navigator>
+  </view>
+</view>

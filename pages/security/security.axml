@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="baseInfo">
+    <image mode="scaleToFill" src="{{avatar}}" class="userImg"></image>
+    <view class="info">
+      <view class="nikeName">{{nickName}}</view>
+      <view class="des">{{des}}</view>
+    </view>
+    <view class="checkbox {{delivery_status==0?'':'active'}}">
+      <view class="btn" onTap="onOff">
+        <view class="point"></view>
+      </view>
+      <view class="btnDes">{{isAnbao}}</view>
+    </view>
+  </view>
+  <view class="tab">
+    <view class="sending {{tabCheck=='left'?'tabActive':''}}" onTap="sending">进行中</view>
+    <view class="sended {{tabCheck=='right'?'tabActive':''}}" onTap="sended">已完成</view>
+  </view>
+  <view a:for="{{list}}" class="order">
+    <view class="goodsInfo">
+      <image mode="scaleToFill" src="{{item.orderPro[0].thumbnail}}" class="goodsImg" lazyLoad="{{true}}"></image>
+      <view class="goodsDes">
+        <view class="goodsTit">{{item.orderPro[0].goods_name}}</view>
+        <view class="goodsGuige">规格：{{item.orderPro[0].content}}</view>
+        <view class="numPrice">
+          <view class="price">￥：{{item.orderPro[0].goods_price}}</view>
+          <view class="num">X {{item.orderPro[0].goods_number}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="orderInfo">
+      <view class="orderInfoL">
+        <view class="oilAddres">地址：{{item.province+item.city+item.district+item.address}}</view>
+        <view class="oilUser">{{item.consignee}}：{{item.mobile}}</view>
+      </view>
+      <view class="orderInfoR" data-orderId="{{item.order_id}}" onTap="confirmBtn">确认送达</view>
+    </view>
+  </view>
+</view>

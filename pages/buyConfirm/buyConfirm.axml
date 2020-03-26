@@ -1,0 +1,75 @@
+<view class="container">
+  <navigator class="addressBox" hover-class="none" url="/pages/address/address?type=0" hidden="{{!isNull}}">
+    <view class="addressNull">请添加收货地址</view>
+    <image class="addressArrow" src="/images/recommendArrow.png"/>
+  </navigator>
+  <navigator class="addressBox" hover-class="none" url="/pages/address/address?type=0" hidden="{{isNull}}">
+    <view class="addressLeft">
+      <view class="addressName">{{address.consignee}}</view>
+      <view class="addressDefault" a:if="{{address.is_default==1}}">默认</view>
+    </view>
+    <view class="addressCon">
+      <view class="addressPhone">
+        <view class="addressPhoneTxt">{{address.mobile}}</view>
+      </view>
+      <view class="addressTxt">{{address.province}}{{address.city}}{{address.district}}{{address.address}}</view>
+    </view>
+    <image class="addressArrow" src="/images/recommendArrow.png"/>
+  </navigator>
+  <view class="goodsBox" a:for="{{goods}}" a:key="*this">
+    <view class="goodsImg">
+      <image src="{{item.img}}"/>
+    </view>
+    <view class="goodsContent">
+      <view class="goodsTitle">{{item.name}}</view>
+      <view class="goodsLabel">已选：{{item.opt_text}}</view>
+      <view class="goodsConBox">
+        <view class="goodsPrice">价格：{{item.price}}{{item.isJifen==true?'积分':'元'}}</view>
+        <view class="goodsQuantity">×{{item.buyQuantity}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="messageBox" a:if="{{aType!= 1}}">
+    <view class="messageTxt">买家留言：</view>
+    <input class="messageInp" placeholder="给商家留言，最多100个字" onInput="leaveMessage" maxlength="100" placeholder-class="inputPlace"/>
+  </view>
+	
+  <view class="info">
+  <view class="freight">
+      <view class="freightTxt">配送方式：</view>
+      <view a:if="{{isCheck == false}}" class="freightType">
+        <view class="freightPrice" a:if="{{aType==1}}">自提</view>
+        <view class="freightPrice" a:if="{{express_type==3}}">快递</view>
+      </view>
+      <view a:if="{{isCheck == true}}" class="freightType">
+        <radio-group class="radio-group freightPrice" name="lib">
+          <label class="radio">
+            <radio value="1" data-value="1" onChange="onChange"/>
+            <text class="radio-text">自提</text>
+          </label>
+          <label class="radio">
+            <radio value="2" data-value="2" onChange="onChange"/>
+            <text class="radio-text">安保配送</text>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="freight">
+      <view class="freightTxt">运费：</view>
+			<view class="canfree" a:if="{{express_type == 2}}">满{{canfree.errand_fee.value}}元减配送费</view>
+      <view class="freightPrice">¥{{freight}}</view>
+    </view>
+  </view>
+  <view onTap="toUse" data-type="1" class="coupon" hidden="{{isCoupon==1?false:true}}">
+    <view class="couponFre">
+      <view class="couponTxt">优惠券</view>
+      <view class="couponTip" hidden="{{is_use==1?false:true}}">优惠券:  -{{coupon_money}} 元</view>
+      <view class="couponPrice"></view>
+    </view>
+  </view>
+  <view class="totalBox">
+    <button class="confirmBtn" type="primary" onTap="confirmBtn">提交订单</button>
+    <view class="totalPrice">{{totalPrice}}{{goods[0].isJifen==true?'积分':'元'}}</view>
+    <view class="totalTxt">合计：</view>
+  </view>
+</view>

@@ -1,0 +1,148 @@
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #fdfdfd;
+  padding: 20rpx 34rpx;
+}
+
+.goods {
+  position: relative;
+  width: 100%;
+  height: 250rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  margin-bottom: 24rpx;
+}
+
+.goodsImgBox {
+  float: left;
+  width: 210rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.goodsRank {
+  position: absolute;
+  top: 10rpx;
+  left: 0;
+  width: 60rpx;
+  height: 48rpx;
+  z-index: 200;
+  font-size: 36rpx;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  padding-right: 12rpx;
+  background-image: url(/images/rankBk.png);
+  background-size: 100% 100%;
+}
+
+.first {
+  background-image: url(/images/firstBk.png);
+  background-size: 100% 100%;
+}
+
+.second {
+  background-image: url(/images/secondBk.png);
+  background-size: 100% 100%;
+}
+
+.third {
+  background-image: url(/images/thirdBk.png);
+  background-size: 100% 100%;
+}
+
+.goodsImg {
+  display: block;
+  width: 100%;
+  height: 204rpx;
+}
+
+.goodsContent {
+  float: right;
+  width: 452rpx;
+  height: 100%;
+  padding-right: 10rpx;
+  padding-top: 18rpx;
+}
+
+.goodsTitle {
+  width: 100%;
+  height: 52rpx;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  color: #333333;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.goodsTxt {
+  width: 100%;
+  height: 68rpx;
+  font-size: 22rpx;
+  line-height: 34rpx;
+  color: #999999;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  margin-bottom: 32rpx;
+}
+
+.goodsBottom {
+  width: 100%;
+  height: 50rpx;
+}
+
+.goodsPrice {
+  float: left;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  font-weight: bold;
+  margin-top: 22rpx;
+  color: #f66447;
+}
+
+.priceTxt {
+  float: left;
+  font-size: 20rpx;
+  line-height: 28rpx;
+  color: #ed405d;
+  margin-left: 2rpx;
+  margin-top: 22rpx;
+}
+
+.goodsSale {
+  float: left;
+  min-width: 124rpx;
+  height: 28rpx;
+  font-size: 18rpx;
+  line-height: 28rpx;
+  text-align: center;
+  color: #666666;
+  background-color: #eeeeee;
+  padding: 0 16rpx;
+  margin-left: 12rpx;
+  margin-top: 22rpx;
+  border-radius: 12rpx;
+}
+
+.goodsBtn {
+  float: right;
+  width: 140rpx;
+  height: 50rpx;
+  font-size: 22rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #f99646;
+  border-radius: 22rpx;
+}

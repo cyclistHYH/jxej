@@ -1,0 +1,80 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: #fcfcfc;
+  overflow: auto;
+  padding: 35rpx;
+}
+.coupon{
+  width: 100%;
+  height: 196rpx;
+  background: url("../../images/coupon-new.png") 0 0 no-repeat;
+  background-size: contain;
+  margin-bottom: 30rpx;
+}
+.left{
+  width: 196rpx;
+  height: 196rpx;
+  padding: 40rpx;
+  float: left;
+}
+.ls{
+  font: bold 68rpx/80rpx "Microsoft Yahei";
+  color: #f66447;
+  text-align: center
+}
+.lx{
+  font: 22rpx/36rpx "Microsoft Yahei";
+  color: #f66447;
+  text-align: center
+}
+.right{
+  width: 484rpx;
+  height: 196rpx;
+  float: right;
+  padding: 42rpx 24rpx;
+}
+.rl{
+  width: 260rpx;
+  float: left;
+}
+.rls{
+  font:bold 26rpx/26rpx "Microsoft YaHei";
+  color: #000;
+  margin-bottom: 16rpx;
+}
+.rlxRed{
+  color: #f66447;
+  display: inline;
+}
+.rlx{
+  font: 20rpx/30rpx "Microsoft YaHei";
+  color: #666666;
+  height: 60rpx;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+.rr{
+  float: right;
+  width: 120rpx;
+  height: 50rpx;
+  background: #f99646;
+  font: 22rpx/50rpx "Microsoft Yahei";
+  text-align: center;
+  margin: 31rpx 0;
+  border-radius: 50rpx;
+  color: #fff;
+  /* border: 1rpx solid transparent; */
+}
+
+
+.oldCoupon{
+  background: url("../../images/coupon-old.png") 0 0/contain no-repeat;
+  color: #666666;
+}
+.oldCoupon .ls,.lx,.rls,.rlx,.rlxRed{
+  color: #666666;
+}
+.oldCoupon .rr{
+  background: #666666;
+}

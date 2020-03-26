@@ -1,0 +1,336 @@
+.container {
+  width: 100%;
+  height: auto;
+  padding: 16rpx 34rpx;
+  background-color: #fbfbfb;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  height: 64rpx;
+  background-color: #efefef;
+  border-radius: 30rpx;
+  overflow: hidden;
+  margin-bottom: 16rpx;
+}
+
+.searchImg {
+  display: block;
+  margin-left: 24rpx;
+  width: 24rpx;
+  height: 24rpx;
+  z-index: 100;
+  margin-top: 20rpx;
+}
+
+.searchTxt {
+  font-size: 28rpx;
+  line-height: 64rpx;
+  color: #999999;
+  margin-left: 20rpx;
+}
+
+.carouselWrap {
+  position: relative;
+  width: 100%;
+  height: 254rpx;
+  margin-bottom: 24rpx;
+}
+
+.carousel {
+  width: 100%;
+  height: 254rpx;
+}
+
+.carouselBox {
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.carouselBox image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dots {
+  position: absolute;
+  bottom: 24rpx;
+  left: 0;
+  width: 100%;
+  height: 16rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 8rpx;
+}
+
+.dot.active {
+  background-color: #ffffff;
+}
+
+.mainNav {
+  display: flex;
+  width: 100%;
+  height: 182rpx;
+  padding: 32rpx 20rpx 0;
+  margin-bottom: 24rpx;
+  background-color: #fff;
+}
+
+.mainNavBox {
+  width: 88rpx;
+  height: 100%;
+  margin-right: 96rpx;
+}
+
+.mainNavBox:last-child {
+  margin-right: 0;
+}
+
+.mainNavImg {
+  display: block;
+  width: 100%;
+  height: 88rpx;
+  border-radius: 50%;
+}
+
+.mainNavTxt {
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #666666;
+}
+.advert{
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+  margin-bottom: 0.24rem;
+  font: 24rpx/40rpx "Microsoft YaHei";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#advSwiper{
+  width: 100%;
+  height: 100%;
+}
+.swiper-item{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.advItem{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+	color: #666666;
+}
+
+.recommend {
+  width: 100%;
+  height: 88rpx;
+  padding: 24rpx 20rpx;
+  background-color: #fff;
+}
+
+.recommendTxt {
+  float: left;
+  font-size: 32rpx;
+  line-height: 40rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.recommendMore {
+  display: flex;
+  align-items: center;
+  float: right;
+  height: 100%;
+}
+
+.recommendMoreTxt {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #666666;
+}
+
+.recommendArrow {
+  display: block;
+  width: 14rpx;
+  height: 24rpx;
+  margin-left: 16rpx;
+}
+
+.goods{
+	width: 100%;
+	height: auto;
+  background-color: #fff !important; 
+  padding: 28rpx 20rpx;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+	background-color: #fff;
+	padding: 0 22rpx 28rpx;
+}
+
+.productBox {
+  width: 308rpx;
+  height: 440rpx;
+  margin-bottom: 12rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+}
+
+.productImg {
+  width: 308rpx;
+  height: 300rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 14rpx;
+}
+
+.productImg image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.productTitleBox {
+  width: 100%;
+  height: 72rpx;
+  overflow: hidden;
+  margin-bottom: 2rpx;
+  background-color: #fff;
+  padding: 0 10rpx;
+}
+
+.productTitle {
+  float: left;
+  width: 170rpx;
+  height: 72rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.productVolume {
+  float: right;
+  max-width: 130rpx;
+  font-size: 20rpx;
+  line-height: 36rpx;
+  color: #666666;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.priceBox {
+  display: flex;
+  width: 100%;
+  height: 40rpx;
+  background-color: #fff;
+  padding: 0 10rpx;
+}
+
+.currentPrice {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  color: #ed405d;
+}
+
+.originalPrice {
+  font-size: 18rpx;
+  line-height: 40rpx;
+  color: #999999;
+  margin-left: 8rpx;
+  text-decoration: line-through;
+}
+
+.priceTxt {
+  font-size: 18rpx;
+  line-height: 40rpx;
+  color: #ed405d;
+  margin-left: 2rpx;
+}
+/* .mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+} */
+/* .maskContent{
+  background: #fff;
+  width: 400rpx;
+  height: 200rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.maskText{
+  text-align: center;
+  font: 28rpx/50rpx "Microsoft YaHei";
+} */
+.popu{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.popuText{
+  width: 400rpx;
+  height: 200rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background: #fff;
+  line-height: 200rpx;
+  border-radius: 10rpx;
+  color: #333333;
+}

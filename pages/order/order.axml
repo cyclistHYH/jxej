@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="orderTop">
+    <scroll-view scroll-x="{{true}}" class="orderNav">
+      <view class="orderNavBox {{activeNav==index? 'active' : ''}}" a:for="{{nav}}" a:key="*this" data-index="{{index}}" onTap="navClick">
+        <view class="orderNavTxt">{{item}}</view>
+        <view class="orderNavLine" />
+      </view>
+    </scroll-view>
+  </view>
+  <view class="main" hidden="{{!isNull}}">
+    <image class="orderEmpty" mode="scaleToFill" src="/images/orderEmpty.jpg"/>
+  </view>
+  <view class="main" hidden="{{isNull}}">
+    <navigator class="orderBox" a:for="{{order}}" a:key="*this" hover-class="none" url="/pages/orderDetails/orderDetails?id={{item.order_id}}">
+      <view class="orderBoxTop">
+        <view class="orderNumber">订单编号：{{item.order_sn}}</view>
+        <view class="orderStatus" a:if="{{item.order_status==0}}">已取消</view>
+        <view class="orderStatus" a:if="{{item.order_status==1}}">待付款</view>
+        <view class="orderStatus" a:if="{{item.order_status==2}}">待发货</view>
+        <view class="orderStatus" a:if="{{item.order_status==3}}">待收货</view>
+        <view class="orderStatus" a:if="{{item.order_status==5}}">已完成</view>
+      </view>
+      <view class="goodsBox" a:for="{{item.orderPro}}" a:for-item="goods" a:key="*this">
+        <view class="goodsImg">
+          <image mode="scaleToFill" src="{{goods.thumbnail}}"/>
+        </view>
+        <view class="goodsContent">
+          <view class="goodsTitle">{{goods.goods_name}}</view>
+          <view class="goodsLabel">{{goods.content}}</view>
+          <view class="goodsConBox">
+            <view class="goodsPrice">¥{{goods.goods_price}}</view>
+            <view class="goodsQuantity">×{{goods.goods_number}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="orderTotal">
+        <view class="totalPrice">¥{{item.order_money}}</view>
+        <view class="totalGoods">共{{item.orderPro.length}}件商品</view>
+      </view>
+      <view class="orderButton">
+        <button class="orderBtn" type="primary" a:if="{{item.order_status==1}}" catchTap="payBtn" data-id="{{item.order_id}}" plain="{{true}}">付款</button>
+        <!-- <button class="cancelBtn" type="primary" a:if="{{item.order_status==1}}" data-id="{{item.order_id}}" catchTap="toCancel" plain="{{true}}">取消订单</button> -->
+        <button class="orderBtn" type="primary" a:if="{{item.order_status==3}}" data-id="{{item.order_id}}" catchTap="confirmBtn" plain="{{true}}">确认收货</button>
+        <button class="deleteBtn" type="primary" a:if="{{item.order_status==3}}" plain="{{true}}">查看物流</button>
+      </view>
+      <view class="type"><image mode="scaleToFill" src="/images/type_{{item.type}}.png"/></view>
+    </navigator>
+  </view>
+</view>
+
+<view class="remind" hidden="{{!isRemind}}">{{remindTxt}}</view>

@@ -1,0 +1,20 @@
+page {
+  background: #fff;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+  background-color: inherit;
+}
+
+.inputPlace {
+  color: #999999;
+}
+
+button {
+  border: none;
+  border-radius: 0;
+}

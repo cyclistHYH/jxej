@@ -1,0 +1,98 @@
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #fdfdfd;
+}
+.noUse{
+  width: 100%;
+  height: 100%;
+  font-size: 48rpx;
+  line-height: 1000rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #666666;
+}
+.spike {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx 34rpx;
+}
+
+.spikeBox {
+  width: 332rpx;
+  height: 504rpx;
+  margin-bottom: 24rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+
+.spikeImgBox {
+  position: relative;
+  width: 100%;
+  height: 324rpx;
+  overflow: hidden
+}
+
+.spikeImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.spikeContent {
+  width: 100%;
+  height: 180rpx;
+  overflow: hidden;
+  padding: 12rpx 10rpx;
+}
+
+.spikeTitle {
+  width: 100%;
+  height: 40rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #333333;
+}
+
+.spikePrice {
+  display: flex;
+  width: 100%;
+  height: 36rpx;
+}
+
+.spikePriceTxt {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  font-weight: 600;
+  color: #ed405d;
+}
+
+.currentPrice {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  font-weight: bold;
+  color: #ed405d;
+}
+
+.originalPrice {
+  font-size: 18rpx;
+  line-height: 36rpx;
+  color: #999999;
+  margin-left: 16rpx;
+  text-decoration: line-through;
+}
+
+.immediateBtn {
+  width: 140rpx;
+  height: 50rpx;
+  font-size: 22rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 22rpx;
+  background-color: #f99646;
+  margin-top: 14rpx;
+}

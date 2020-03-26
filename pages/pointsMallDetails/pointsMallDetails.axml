@@ -1,0 +1,65 @@
+<view class="container">
+  <view class="spikeDetails">
+      <swiper indicator-dots="{{false}}" autoplay="true" duration="500" interval="1500" circular="true" class="imgShow">
+        <block a:for="{{album}}">
+          <swiper-item>
+            <view class="imgs">
+              <image mode="scaleToFill" src="{{item}}"/>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="prices">
+        <view class="newPrice">{{price}} 积分</view>
+      </view>
+      <view class="des">
+        <view class="desTitle">{{product_name}}</view>
+      </view>
+      <rich-text type="text" nodes="{{content}}" class="richContent"></rich-text>
+      <view class="footer">
+        <navigator class="fIcon" url="/pages/shopCart/shopCart"></navigator>
+        <view class="buy" onTap="fastExchange">立即兑换</view>
+      </view>
+  </view>
+</view>
+
+
+<view class="popUpBk" hidden="{{!isShow}}" catchTap="toClose"></view>
+  <view class="popUp" hidden="{{!isShow}}">
+    <image class="close" mode="scaleToFill" onTap="toClose" src="/images/close.png"/>
+    <view class="popUpInfo">
+      <image class="popUpImg" mode="scaleToFill" src="{{goods.thumbnail}}"/>
+      <view class="popUpInfoRight">
+        <view class="popUpPrice">{{opt_price}} 积分<view class="popUpStock">库存：{{stock}}</view></view>
+        <view class="popUpLabel">已选：{{opt_text}} {{opt_text1}}</view>
+      </view>
+    </view>
+
+  <view class="popUpScroll">
+    <view class="popUpNumber">
+      <view class="numberTxt">数量</view>
+      <view class="numberBox">
+        <view class="numberLess" onTap="numberLess">
+          <image mode="scaleToFill" src="/images/prev.png"/>
+        </view>
+        <view class="numberShow">{{buyQuantity}}</view>
+        <view class="numberPlus" onTap="numberPlus">
+          <image mode="scaleToFill" src="/images/plus.png"/>
+        </view>
+      </view>
+    </view>
+    <view class="popUpLabel">
+      <view class="popUpLabelTxt">{{goods.goods_optional[0].name}}</view>
+      <view class="popUpLabelBox">
+        <view class="labelBox {{currentLabel==index? 'active' : ''}}" a:for="{{goods.goods_optional[0].opt_text}}" a:key="*this" data-index="{{index}}" catchTap="labelItemTap">{{item}}</view>
+      </view>
+    </view>
+    <view class="popUpLabel">
+      <view class="popUpLabelTxt">{{goods.goods_optional[1].name}}</view>
+      <view class="popUpLabelBox">
+        <view class="labelBox {{currentLabel1==index? 'active' : ''}}" a:for="{{goods.goods_optional[1].opt_text}}" a:key="*this" data-index="{{index}}" catchTap="labelItemTap1">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <button class="confirmBtn" type="primary" catchTap="confirmBtn">确认</button>
+</view>

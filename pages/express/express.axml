@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="des">
+      <view class="desLeft">
+        <image mode="scaleToFill" src="/images/express.jpg"/>
+      </view>
+      <view class="desRight">
+        <view class="status">运输中</view>
+        <view class="name">快递公司：{{courier.com}}</view>
+        <view class="call">快递单号：{{courier.nu}}</view>
+      </view>
+    </view>
+    <view class="express_steps">
+      <steps 
+        activeIndex="{{data.length}}"
+        items="{{data}}"
+        direction="vertical"
+        size="14"
+      ></steps>
+    </view>
+</view>

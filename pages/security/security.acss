@@ -1,0 +1,189 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: #fcfcfc;
+  overflow: auto;
+  padding: 34rpx;
+}
+.baseInfo{
+  width: 682rpx;
+  height: 114rpx;
+}
+.userImg{
+  width: 114rpx;
+  height: 114rpx;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  float: left;
+}
+.info{
+  width: 480rpx;
+  height: 114rpx;
+  padding: 0 20rpx;
+  float: left;
+}
+.nikeName{
+  font: 36rpx/70rpx "Microsoft Yahei";
+  color: #000;
+  width: 480rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.des{
+  font: 22rpx/44rpx "Microsoft YaHei";
+  color: #999999;
+  width: 480rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.checkbox{
+  width: 58rpx;
+  height: 54rpx;
+  float: right;
+  font: 18rpx/20rpx "Microsoft YaHei";
+  margin-top: 30rpx;
+}
+.checkbox .btn{
+  width: 58rpx;
+  height: 28rpx;
+  background: #999999;
+  border: 2px solid #999;
+  border-radius: 26rpx;
+  margin-bottom: 10rpx;
+}
+.point{
+  width: 22rpx;
+  height: 22rpx;
+  background: #fff;
+  border-radius: 50%;
+  float: left;
+  transition: all 0.3s;
+}
+.active .btn{
+  background: #f99646;
+  border: 2px solid #f99646;
+}
+.active .point{
+  float: right;
+  transition: all 0.3s;
+}
+.tab{
+  width: 100%;
+  height: 108rpx;
+  margin-top: 22rpx; 
+}
+.sending{
+  width: 100rpx;
+  height: 48rpx;
+  text-align: center;
+  font:bold 30rpx/48rpx "Microsoft YaHei";
+  color: #666;
+  float: left;
+  margin: 30rpx 120rpx;
+}
+.sended{
+  width: 100rpx;
+  height: 48rpx;
+  text-align: center;
+  font:bold 30rpx/48rpx "Microsoft YaHei";
+  color: #666;
+  float: right;
+  margin: 30rpx 120rpx;
+}
+.tabActive{
+  color: #000;
+  border-bottom: 4rpx solid #000
+}
+.order{
+  width: 100%;
+  height: 378rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  /* padding: 24rpx; */
+  margin-bottom: 20rpx;
+}
+.goodsInfo{
+  width: 100%;
+  height: 208rpx;
+  padding: 24rpx;
+  border-bottom: 1px solid #ccc;
+}
+.goodsImg{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  overflow: hidden; 
+  background: #666;
+  float: left;
+}
+.goodsDes{
+  width: 470rpx;
+  height: 160rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float:right;
+  padding-left: 20rpx;
+}
+.goodsTit{
+  font: 26rpx/40rpx "Microsoft YaHei";
+  height: 40rpx;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.goodsGuige{
+  font: 26rpx/40rpx "Microsoft YaHei";
+  height: 40rpx;
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.numPrice{
+  width: 100%;
+  height: 80rpx;
+}
+.price{
+  font: bold 26rpx/80rpx "Microsoft YaHei";
+  color: #f66447;
+  float: left;
+}
+.num{
+  font: 22rpx/80rpx "Microsoft YaHei";
+  color: #000;
+  float: right;
+}
+.orderInfo{
+  width: 100%;
+  height: 168rpx;
+  padding: 24rpx;
+}
+.orderInfoL{
+  width: 420rpx;
+  min-height: 60rpx;
+  float: left;
+}
+.oilAddres{
+  font: 24rpx/36rpx "Microsoft YaHei";
+  color: #666;
+  margin-bottom: 10rpx;
+}
+.oilUser{
+  font: 24rpx/36rpx "Microsoft YaHei";
+  color: #666;
+}
+.orderInfoR{
+  float: right;
+  width: 156rpx;
+  height: 52rpx;
+  border: 2px solid #fa8e2f;
+  font: 22rpx/48rpx "Microsoft YaHei";
+  text-align: center;
+  color: #fa8e2f;
+  border-radius: 52rpx;
+  margin-top: 60rpx;
+}

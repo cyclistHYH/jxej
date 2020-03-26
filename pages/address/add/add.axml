@@ -1,0 +1,30 @@
+<view class="container">
+  <form onSubmit="onceSubmit">
+    <view class="uploadBox">
+      <view class="uploadTxt">收货人</view>
+      <input class="uploadInp" placeholder="请输入姓名" name="name" placeholder-class="inputPlace" />
+    </view>
+    <view class="uploadBox">
+      <view class="uploadTxt">联系电话</view>
+      <input class="uploadInp" placeholder="请输入电话号码" type="tel" maxlength="11" name="phone" placeholder-class="inputPlace" />
+    </view>
+    <view class="uploadBox">
+      <view class="uploadTxt">所在地区</view>
+      <view class="cityChoose" onTap="cityChoose">
+        <view class="cityRemind" a:if="{{isRemind}}">请选择地区</view>
+        <view class="cityChooseShow" a:else>{{provinces}}{{city}}{{area}}</view>
+        <image class="cityChooseImg" src="/images/addressArrow.png"/>
+      </view>
+    </view>
+    <view class="textareaBox">
+      <view class="textareaBoxTxt">详细地址</view>
+      <textarea class="textareaInp" placeholder="请输入详细地址" name="addDetails" placeholder-class="inputPlace" maxlength="-1" show-count="{{false}}" />
+    </view>
+    <view class="defaultBox">
+      <view class="defaultTxt">设置为默认地址</view>
+      <switch class="defaultBtn" checked="{{isDefault}}" name="isDefault" color="#fa8e2f" />
+    </view>
+    <button class="saveBtn" form-type="submit" type="primary" hover-class="none">保存</button>
+    <!-- <button class="saveBtn" onTap="toSave" type="primary"  hover-class="none">保存</button> -->
+  </form>
+</view>

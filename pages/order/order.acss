@@ -1,0 +1,257 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fbfbfb;
+  padding: 0 34rpx;
+  min-height: 100vh;
+}
+
+.orderTop {
+  width: 100%;
+  height: 84rpx;
+  margin-bottom: 24rpx;
+  padding-top: 30rpx;
+}
+
+.orderNav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.orderNavBox {
+  position: relative;
+  flex: 0 0 auto;
+  height: 54rpx;
+  padding: 0 10rpx 2rpx;
+  margin-right: 88rpx;
+}
+
+.orderNavBox:last-child {
+  margin-right: 0;
+}
+
+.orderNavBox.active .orderNavTxt {
+  color: #333333;
+}
+
+.orderNavTxt {
+  font-size: 32rpx;
+  line-height: 52rpx;
+  color: #666666;
+}
+
+.orderNavBox.active .orderNavLine {
+  display: block;
+}
+
+.orderNavLine {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 48rpx;
+  height: 2rpx;
+  margin-left: -24rpx;
+  background-color: #333333;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+}
+
+.orderEmpty {
+  display: block;
+  width: 100%;
+  height: 672rpx;
+}
+
+.orderBox {
+  width: 100%;
+  min-height: 416rpx;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8rpx;
+  margin-bottom: 24rpx;
+  padding: 14rpx 0 20rpx;
+  position: relative;
+}
+
+.orderBoxTop {
+  width: 100%;
+  height: 36rpx;
+  padding: 0 20rpx;
+}
+
+.orderNumber {
+  float: left;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  color: #666666;
+}
+
+.orderStatus {
+  float: right;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #fa8e2f;
+}
+
+.goodsBox {
+  width: 100%;
+  height: 198rpx;
+  border-bottom: 2rpx solid #e7e7e7;
+  padding: 0 20rpx;
+}
+
+.goodsImg {
+  float: left;
+  width: 160rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+
+.goodsImg image {
+  display: block;
+  width: 160rpx;
+  height: 156rpx;
+}
+
+.goodsContent {
+  float: right;
+  width: 468rpx;
+  height: 100%;
+  padding-top: 16rpx;
+}
+
+.goodsTitle {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  color: #333333;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  margin-bottom: 16rpx;
+}
+
+.goodsLabel {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #666666;
+  margin-bottom: 44rpx;
+}
+
+.goodsConBox {
+  width: 100%;
+  height: 32rpx;
+}
+
+.goodsPrice {
+  float: left;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  font-weight: bold;
+  color: #f66447;
+}
+
+.goodsQuantity {
+  float: right;
+  font-size: 22rpx;
+  line-height: 32rpx;
+  color: #333333;
+}
+
+.orderTotal {
+  width: 100%;
+  height: 32rpx;
+  margin-top: 22rpx;
+  margin-bottom: 28rpx;
+  padding-right: 20rpx;
+}
+
+.totalPrice {
+  float: right;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  font-weight: bold;
+  color: #f66447;
+}
+
+.totalGoods {
+  float: right;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #666666;
+  margin-right: 32rpx;
+}
+
+.orderButton {
+  width: 100%;
+  height: 52rpx;
+}
+
+.orderButton button {
+  float: right;
+  width: 160rpx;
+  height: 52rpx;
+  border-width: 2rpx;
+  border-style: solid;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  border-radius: 24rpx;
+  margin-right: 20rpx;
+}
+
+.orderBtn {
+  color: #fa8e2f;
+  border-color: #fa8e2f;
+}
+
+.cancelBtn {
+  color: #999999;
+  border-color: #999999;
+}
+
+.deleteBtn {
+  color: #666666;
+  border-color: #999999;
+}
+
+.remind {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -30rpx;
+  margin-left: -100rpx;
+  width: 200rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+  border-radius: 8rpx;
+}
+
+.type{
+  width: 170rpx;
+  height: 170rpx;
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+  transform: rotate(-30deg)
+}
+.type image{
+  width: 100%;
+  height: 100%;
+}

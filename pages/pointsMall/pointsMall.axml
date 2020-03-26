@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="pointsMall">
+    <navigator a:for="{{mall}}" class="mallBox" a:key="*this" url="/pages/pointsMallDetails/pointsMallDetails?id={{item.id}}">
+      <view class="mallImgBox">
+        <image class="mallImg" mode="scaleToFill" src="{{item.thumbnail}}" lazyLoad="{{true}}"></image>
+      </view>
+      <view class="mallContent">
+        <view class="mallTitle">{{item.product_name}}</view>
+        <view class="mallPrice">
+          <view class="integralPrice">{{item.integral}}</view>
+          <view class="mallPriceTxt">积分</view>
+          <!-- <view class="mallStock">库存{{item.stock}}</view> -->
+        </view>
+        <view class="immediateBtn">立即兑换</view>
+      </view>
+    </navigator>
+  </view>
+</view>

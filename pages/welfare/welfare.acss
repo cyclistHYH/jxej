@@ -1,0 +1,227 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fcfcfc;
+  overflow: auto;
+}
+.yellowBg{
+  width: 100%;
+  height: 210rpx;
+  background: url("../../images/yellowBg.png") no-repeat 0 0;
+  background-size: cover;
+}
+.check{
+  width: 682rpx;
+  /* height: 345rpx; */
+  background: #fff;
+  margin: -100rpx auto 20rpx;
+  border-radius: 10rpx;
+  padding: 30rpx 30rpx;
+}
+.today{
+  font: 28rpx/28rpx "Microsoft Yahei";
+  color: #000;
+  display: inline
+}
+.week{
+  font: 20rpx/20rpx "Microsoft Yahei";
+  color: #666666;
+  padding: 8rpx 20rpx;
+  background: rgba(238, 238, 238, 0.8);
+  display: inline-block;
+  border-radius: 20rpx;
+  margin-left: 20rpx;
+}
+.colorRed{
+  color: #f66447;
+  display: inline
+}
+.time{
+  height: 120rpx;
+  position: relative;
+  padding: 55rpx 0;
+  margin: 20rpx 0;
+}
+.line{
+  width: 100%;
+  height: 10rpx;
+  background-image: linear-gradient(to right,#ff8626,#ff5e38);
+  border-radius: 5rpx;
+}
+.timeLine{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: -65rpx;
+}
+.perDay{
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #f99646;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  margin: 30rpx 0;
+  border: rgba(255, 205, 152,0.99) 12rpx solid;
+}
+.active{
+  background: #f66447;
+}
+/* .shang{
+  font-size: 20rpx;
+  line-height: 42rpx;
+} */
+.xia{
+  font-size: 20rpx;
+  line-height: 38rpx;
+  /* margin-top: -10rpx; */
+}
+.checkBtn{
+  width: 100%;
+  height: 80rpx;
+  color: #fff;
+  background-image: -webkit-linear-gradient(to right,#ff8626,#ff5e38);
+  background-image: linear-gradient(to right,#ff8626,#ff5e38);
+  border-radius: 10rpx;
+  text-align: center;
+  font: 32rpx/80rpx "Microsoft YaHei";
+}
+.task{
+  width: 682rpx;
+  padding:0 30rpx;
+  background: #fff;
+  margin: 0 auto 20rpx;
+}
+.taskTitle{
+  font: 26rpx/26rpx "Microsoft YaHei";
+  color: #000;
+  padding-top: 30rpx;
+}
+.taskList{
+  height: 156rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #eee;
+  margin: 0 auto;
+  padding: 34rpx 0;
+}
+.last{
+  border: none;
+}
+.taskIcon{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  float: left;
+}
+.taskIcon1{
+  background: url("../../images/task.png") 0 0 no-repeat;
+  background-size: 100%;
+}
+.taskIcon2{
+  background: url("../../images/task.png") 0 -86rpx no-repeat;
+  background-size: 100%;
+}
+.taskIcon3{
+  background: url("../../images/task.png") 0 -176rpx no-repeat;
+  background-size: 100%;
+}
+.taskContent{
+  margin: 0 15rpx;
+  width: 120rpx;
+  height: 88rpx;
+  float: left;
+}
+.taskCs{
+  font: 26rpx/88rpx "Microsoft YaHei";
+  color: #000;
+  /* margin: 10rpx 0 20rpx 0; */
+}
+.taskCx{
+  font: 22rpx/22rpx "Microsoft YaHei";
+  color: #fdd544;
+}
+.taskBtnOver{
+  background: #666666
+}
+.taskBtn{
+  height: 50rpx;
+  width: 120rpx;
+  background: #f99646;
+  border-radius: 25rpx;
+  color: #fff;
+  text-align: center;
+  font: 24rpx/50rpx "Microsoft YaHei";
+  float: right;
+  margin: 19rpx 0;
+}
+.ruler{
+  width: 682rpx;
+  padding:0 30rpx 30rpx;
+  background: #fff;
+  margin: 0 auto 20rpx;
+}
+.rulerTitle{
+  font: 26rpx/26rpx "Microsoft YaHei";
+  color: #000;
+  padding-top: 30rpx;
+  padding-bottom: 20rpx;
+}
+.rulerContent{
+  font: 20rpx/30rpx "Microsoft YaHei";
+  color: #666666;
+}
+
+
+
+.pop{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+}
+.popMain{
+  width: 600rpx;
+  height: 600rpx;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10rpx;
+  padding: 30rpx;
+}
+.popTitle{
+  font:bold 32rpx/50rpx "Microsoft YaHei";
+  color: #000;
+  margin-bottom: 20rpx;
+  text-align: center
+}
+.popJifen{
+  font: 24rpx/24rpx "Microsoft YaHei";
+  color: #f66447;
+  text-align: center
+}
+.popImg{
+  width: 100%;
+  height: 270rpx;
+}
+.popTip{
+  width: 100%;
+  font: 28rpx/50rpx "Microsoft YaHei";
+  text-align: center;
+}
+.popBtn{
+  width: 100%;
+  height: 80rpx;
+  background: #f66447;
+  border-radius: 40rpx;
+  text-align: center;
+  font: 32rpx/80rpx "Microsoft YaHei";
+  color: #fff;
+  margin-top: 40rpx;
+}

@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/shopCart/shopCart",
+    "pages/mine/mine",
+    "pages/spike/spike",
+    "pages/fightGroup/fightGroup",
+    "pages/hotSale/hotSale",
+    "pages/pointsMall/pointsMall",
+    "pages/search/search",
+    "pages/product/product",
+    "pages/integral/integral",
+    "pages/order/order",
+    "pages/address/address",
+    "pages/address/modify/modify",
+    "pages/address/add/add",
+    "pages/productDetails/productDetails",
+    "pages/buyConfirm/buyConfirm",
+    "pages/orderDetails/orderDetails",
+    "pages/buySuccess/buySuccess",
+    "pages/spikeDetails/spikeDetails",
+    "pages/fightGroupDetails/fightGroupDetails",
+    "pages/pointsMallDetails/pointsMallDetails",
+    "pages/welfare/welfare",
+    "pages/coupon/coupon",
+    "pages/security/security",
+    "pages/groupDetails/groupDetails",
+    "pages/getCoupon/getCoupon",
+    "pages/express/express"
+  ],
+  "window": {
+    "defaultTitle": "京兴e家"
+  },
+  "tabBar": {
+    "textColor": "#999999",
+    "selectedColor": "#333333",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "/images/index-off.png",
+        "activeIcon": "/images/index-on.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "name": "分类",
+        "icon": "/images/classify-off.png",
+        "activeIcon": "/images/classify-on.png"
+      },
+      {
+        "pagePath": "pages/shopCart/shopCart",
+        "name": "购物车",
+        "icon": "/images/shopCart-off.png",
+        "activeIcon": "/images/shopCart-on.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "name": "我的",
+        "icon": "/images/mine-off.png",
+        "activeIcon": "/images/mine-on.png"
+      }
+    ]
+  }
+}

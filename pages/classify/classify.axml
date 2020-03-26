@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="classifyTop">
+    <navigator class="search" url="/pages/search/search" hover-class="none">
+      <image class="searchImg" src="/images/magnifier.png"/>
+      <view class="searchTxt">搜索商品</view>
+    </navigator>
+  </view>
+  <view class="main">
+    <scroll-view scroll-y="{{true}}" class="typeNav">
+      <view class="typeNavBox {{activeNav==index? 'active' : ''}}" a:for="{{typeNav}}" a:key="*this" data-index="{{index}}" onTap="navClick">
+        <view class="typeNavTxt">{{item.name}}</view>
+      </view>
+    </scroll-view>
+    <view class="categoryList">
+      <navigator class="categoryBox" a:for="{{category}}" a:key="*this" url="/pages/product/product?id={{item.id}}">
+        <view class="categoryImg">
+          <image mode="scaleToFill" src="{{item.image}}"/>
+        </view>
+        <view class="categoryTxt">{{item.name}}</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="popu" a:if="{{isOpen == 0}}">
+  <view class="popuText">休息中...</view>  
+</view>

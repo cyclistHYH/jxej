@@ -1,0 +1,120 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fcfcfc;
+  padding-bottom: 128rpx;
+  overflow: hidden;
+}
+
+.integral {
+  width: 100%;
+  height: 100%;
+  background: url(/images/integralBk.jpg) no-repeat;
+  background-size: 100% 340rpx;
+  padding: 76rpx 34rpx 0;
+  overflow-y: auto;
+}
+
+.integralNumber {
+  width: 100%;
+  font-size: 100rpx;
+  line-height: 100rpx;
+  font-weight: bold;
+  color: #fff;
+  padding: 0 20rpx;
+}
+
+.integralTxt {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #fff;
+  padding-left: 20rpx;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  border-radius: 8rpx;
+  background-color: #fff;
+  padding: 12rpx 20rpx;
+  min-height: 400rpx;
+}
+
+.integralTitle {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.integralBox {
+  width: 100%;
+  height: 96rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.integralLeft {
+  float: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.integralLeftTxt {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #2c2624;
+  margin-bottom: 12rpx;
+}
+
+.integralLeftTime {
+  font-size: 20rpx;
+  line-height: 20rpx;
+  color: #666666;
+}
+
+.integralRight {
+  float: right;
+  font-size: 28rpx;
+  line-height: 94rpx;
+  color: #f66447;
+}
+
+.integralDescription {
+  position: fixed;
+  bottom: 32rpx;
+  left: 0;
+  width: 100%;
+  height: auto;
+  font-size: 20rpx;
+  line-height: 32rpx;
+  text-align: center;
+  padding: 0 64rpx;
+  color: #666666;
+}
+
+
+.pop{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+}
+.popMain{
+  width: 500rpx;
+  height: 500rpx;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10rpx;
+}

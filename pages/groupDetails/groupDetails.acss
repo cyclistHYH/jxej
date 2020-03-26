@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 12rpx;
+  padding-bottom: 100rpx;
+  background: #fafafa;
+}
+.activity{
+  width: 684rpx;
+  /* min-height: 1000rpx; */
+  border-radius: 10rpx 10rpx;
+  margin: 0 auto;
+  background: #fff;
+  padding-bottom: 20rpx;
+  margin-bottom: 20rpx;
+}
+.goods{
+  width: 100%;
+  height: 281rpx;
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.goodsImg{
+  width: 240rpx;
+  height: 240rpx;
+  float: left;
+  background: #ccc;
+}
+.goodsRight{
+  float: right;
+  width: 400rpx;
+  height: 240rpx;
+  padding: 10rpx 20rpx;
+}
+.grS{
+  width: 100%;
+  height: 140rpx;
+}
+.grsTitle{
+  font-size: 27rpx;
+  color: #333333;
+  line-height: 35rpx;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.grsDes{
+  font-size: 22rpx;
+  color: #666666;
+  line-height: 30rpx;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.grX{
+  width: 100%;
+  height: 80rpx;
+}
+.price{
+  width: 100%;
+  height: 40rpx;
+}
+.newPrice{
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #f66447;
+  display: inline-block;
+  padding-right: 10rpx;
+}
+.oldPrice{
+  font-size: 17rpx;
+  color: #999999;
+  display: inline-block;
+  text-decoration: line-through;
+}
+.youhui{
+  width: 100%;
+  height: 30rpx;
+}
+.num ,.chep{
+  min-width: 38rpx;
+  height: 24rpx;
+  border: 1rpx solid #fa8e2f;
+  font-size: 16rpx;
+  line-height: 22rpx;
+  display: inline-block;
+  margin: 0 10rpx;
+  padding: 0 5rpx;
+}
+.time{
+  width: 100%;
+  /* height: 320rpx; */
+  padding-top: 45rpx;
+}
+.djsTitle{
+  font-size: 20rpx;
+  text-align: center;
+  color: #f66447;
+  line-height: 50rpx;
+}
+.djsCon{
+  margin: 0 auto;
+  width: 150rpx;
+  height: 34rpx;
+  color: #f66447;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+}
+.redBg{
+  width: 34rpx;
+  height: 34rpx;
+  background: #f66447;
+  border-radius: 5rpx;
+  color: #fff;
+  display: inline-block;
+  font-size: 20rpx;
+  line-height: 34rpx;
+  text-align: center;
+}
+.txt{
+  width: 435rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 48rpx;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+.red{
+  display: inline;
+  color: #f66447;
+}
+.btn{
+  width: 542rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  background: #fa8e2f;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 55rpx;
+  font-weight: bold;
+}
+.tishi{
+  width: 100%;
+  text-align: center;
+  color: #666666;
+  font-size: 18rpx;
+  line-height: 18rpx;
+}

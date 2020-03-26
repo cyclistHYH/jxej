@@ -1,0 +1,21 @@
+<view class="container">
+  <view a:for="{{goods}}" class="goods" a:key="*this">
+    <view a:if="{{index==0}}" class="goodsRank first">{{index+1}}</view>
+    <view a:elif="{{index==1}}" class="goodsRank second">{{index+1}}</view>
+    <view a:elif="{{index==2}}" class="goodsRank third">{{index+1}}</view>
+    <view a:else class="goodsRank">{{index+1}}</view>
+    <view class="goodsImgBox">
+      <image class="goodsImg" src="{{item.thumbnail}}" lazyLoad="{{true}}"></image>
+    </view>
+    <view class="goodsContent">
+      <view class="goodsTitle">{{item.product_name}}</view>
+      <view class="goodsTxt">{{item.introduction}}</view>
+      <view class="goodsBottom">
+        <view class="goodsPrice">¥{{item.price}}</view>
+        <view class="priceTxt">起</view>
+        <view class="goodsSale">已售{{item.sales_volume}}</view>
+        <navigator class="goodsBtn" hover-class="none" url="/pages/productDetails/productDetails?id={{item.id}}">立即抢购</navigator>
+      </view>
+    </view>
+  </view>
+</view>

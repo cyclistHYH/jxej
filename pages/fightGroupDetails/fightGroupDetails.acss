@@ -1,0 +1,278 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 12rpx;
+  padding-bottom: 100rpx;
+  background: #fafafa;
+}
+
+.imgs image{
+  width: 750rpx;
+  height: 452rpx;
+  margin: 0%;
+  padding: 0%;
+  display: block;
+}
+
+.prices{
+  background: url(../../images/spike-bg.png) no-repeat left top;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 96rpx;
+  margin: 0rpx;
+  padding: 20rpx 20rpx;
+}
+.newPrice{
+  font: bold 40rpx/56rpx "Microsoft YaHei";
+  color: #fff;
+  float: left;
+  margin-right: 20rpx;
+  border: 1px solid transparent;
+}
+.oldPrice{
+  font: 28rpx/56rpx "Microsoft YaHei";
+  color: #fff;
+  text-decoration: line-through;
+  float: left;
+  border: 1px solid transparent;
+}
+.lastTime{
+  float: right;
+  color: #fff;
+  font: 32rpx/56rpx "Microsoft YaHei";
+  border: 1px solid transparent;
+}
+.lastTime .span{
+  display: inline;
+  border: 1px solid transparent;
+  text-align: center;
+  font: 32rpx/56rpx "Microsoft YaHei";
+}
+.des{
+  width: 100%;
+  background: #fff;
+}
+.desTitle{
+  font: 32rpx/40rpx "MIcrosoft Yahei";
+  color: #333;
+  padding: 20rpx;
+  border: 1px solid transparent;
+}
+.richContent{
+  font-size: 0;
+  line-height: 0.6rem;
+}
+.footer{
+  width: 100%;
+  height: 100rpx;
+  background: #fa8e2f;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.fIcon{
+  width: 100rpx;
+  height: 100rpx;
+  background: #fff url(../../images/shopCart-on.png) no-repeat center center;
+  background-size: 80% 70%; 
+  float: left;
+}
+.buy{
+  width: 650rpx;
+  height: 100rpx;
+  background: #fa8e2f;
+  color: #fff;
+  font: bold 32rpx/90rpx "Microsoft Yahei";
+  float: right;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+
+
+.popUpBk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.65);
+  z-index: 100;
+}
+
+.popUp {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 600rpx;
+  max-height: 730rpx;
+  height: auto;
+  background-color: #fff;
+  border-radius: 28rpx 28rpx 0 0 ;
+  z-index: 200;
+  padding-top: 40rpx;
+  padding-bottom: 90rpx;
+}
+
+.close {
+  position: absolute;
+  top: 34rpx;
+  right: 34rpx;
+  width: 30rpx;
+  height: 34rpx;
+  z-index: 2100;
+}
+
+.popUpInfo {
+  width: 100%;
+  height: 140rpx;
+  padding: 0 34rpx;
+  margin-bottom: 20rpx;
+}
+
+.popUpImg {
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.popUpInfoRight {
+  float: left;
+  width: 510rpx;
+  height: 100%;
+  padding-left: 40rpx;
+  padding-top: 16rpx;
+}
+
+.popUpPrice {
+  width: 100%;
+  height: 52rpx;
+  font-size: 36rpx;
+  line-height: 52rpx;
+  font-weight: bold;
+  color: #fa542f;
+}
+
+.popUpStock{
+  color: #333333;
+  display: inline-block;
+  font-size: 24rpx;
+  line-height: 52rpx;
+  display: inline;
+  padding-left: 10rpx;
+  font-weight: normal;
+}
+
+.popUpLabel {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #666666;
+}
+
+.popUpScroll {
+  width: 100%;
+  min-height: 310rpx;
+  max-height: 440rpx;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 26rpx 34rpx 0;
+}
+
+.popUpNumber {
+  width: 100%;
+  height: 96rpx;
+  margin-bottom: 32rpx;
+}
+
+.numberTxt {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333333;
+  margin-bottom: 24rpx;
+}
+
+.numberBox {
+  width: 100%;
+  height: 36rpx;
+}
+
+.numberLess,.numberPlus {
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+}
+
+.numberLess image,.numberPlus image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.numberShow {
+  float: left;
+  width: 74rpx;
+  height: 36rpx;
+  font-size: 32rpx;
+  line-height: 36rpx;
+  text-align: center;
+  color: #333333;
+}
+
+.popUpLabel {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12rpx;
+}
+
+.popUpLabelTxt {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333333;
+  margin-bottom: 16rpx;
+}
+
+.popUpLabelBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+.labelBox {
+  min-width: 100rpx;
+  height: 42rpx;
+  font-size: 24rpx;
+  line-height: 38rpx;
+  text-align: center;
+  padding: 0 16rpx;
+  border: 2rpx solid #cccccc;
+  border-radius: 4rpx;
+  margin-right: 24rpx;
+  color: #333333;
+  margin-bottom: 24rpx;
+}
+
+.labelBox.active {
+  line-height: 42rpx;
+  border: none;
+  color: #fff;
+  background-color: #fa8e2f;
+}
+
+.confirmBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  color: #fff;
+  background-color: #fa8e2f;
+  z-index: 2200;
+}

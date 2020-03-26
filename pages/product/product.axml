@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="goods">
+    <view a:for="{{goods}}" class="goodsBox" a:key="*this">
+      <navigator url="/pages/productDetails/productDetails?id={{item.id}}" hover-class="none">
+        <view class="goodsImgBox">
+          <image class="goodsImg" mode="scaleToFill" src="{{item.thumbnail}}" lazyLoad="{{true}}"></image>
+        </view>
+        <view class="goodsContent">
+          <view class="goodsTitle">{{item.product_name}}</view>
+          <view class="goodsPrice">
+            <view class="currentPrice">¥{{item.price}}</view>
+            <!-- <view class="priceTxt">起</view> -->
+            <view class="originalPrice">¥{{item.market_price}}</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="remind" hidden="{{!isRemind}}">{{remindTxt}}</view>

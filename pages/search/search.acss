@@ -1,0 +1,175 @@
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #fefefe;
+  padding: 16rpx 34rpx;
+}
+
+.searchBox {
+  position: relative;
+  width: 100%;
+  height: 56rpx;
+  background-color: #f7f7f7;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+
+.searchInp {
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+  line-height: 56rpx;
+  color: #333333;
+  padding: 0 60rpx;
+}
+
+.searchImg {
+  position: absolute;
+  top: 16rpx;
+  left: 24rpx;
+  width: 24rpx;
+  height: 24rpx;
+  z-index: 100;
+}
+
+.searchCon {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16rpx;
+}
+
+.searchConTop {
+  width: 100%;
+  height: 72rpx;
+  margin-top: 8rpx;
+  margin-bottom: 16rpx;
+}
+
+.searchTitle {
+  float: left;
+  height: 72rpx;
+  font-size: 24rpx;
+  line-height: 72rpx;
+  color: #2c2624;
+}
+
+.searchConList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+.searchConBox {
+  height: 48rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  padding: 0 28rpx;
+  background-color: #f0f0f0;
+  border-radius: 6rpx;
+  margin-right: 18rpx;
+  margin-bottom: 30rpx;
+}
+
+.deleteBtn {
+  float: right;
+  width: 28rpx;
+  height: 30rpx;
+  margin-top: 21rpx;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 20rpx 0;
+}
+
+.productBox {
+  width: 332rpx;
+  height: 464rpx;
+  margin-bottom: 12rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+
+.productImg {
+  width: 332rpx;
+  height: 324rpx;
+  border-radius: 8rpx;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  margin-bottom: 14rpx;
+}
+
+.productImg image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.productTitleBox {
+  width: 100%;
+  height: 72rpx;
+  overflow: hidden;
+  margin-bottom: 2rpx;
+}
+
+.productTitle {
+  float: left;
+  width: 170rpx;
+  height: 72rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.productVolume {
+  float: right;
+  max-width: 130rpx;
+  font-size: 20rpx;
+  line-height: 36rpx;
+  color: #666666;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.priceBox {
+  display: flex;
+  width: 100%;
+  height: 40rpx;
+}
+
+.currentPrice {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  color: #ed405d;
+}
+
+.originalPrice {
+  font-size: 18rpx;
+  line-height: 40rpx;
+  color: #999999;
+  margin-left: 8rpx;
+  text-decoration: line-through;
+}
+
+.priceTxt {
+  font-size: 18rpx;
+  line-height: 40rpx;
+  color: #ed405d;
+  margin-left: 2rpx;
+}

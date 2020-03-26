@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="emptyShop" hidden="{{!isEmpty}}">
+    <image class="emptyShopImg" mode="scaleToFill" src="/images/emptyShopBk.jpg"/>
+  </view>
+  <view class="shopCart" hidden="{{isEmpty}}">
+    <view class="shopTop">
+      <view class="chooseAll" onTap="chooseAll">
+        <view class="chooseBox {{isChooseAll? 'active' : ''}}" />
+        <view class="chooseAllTxt">全选</view>
+      </view>
+      <button class="deleteBtn" hover-class="none" catchTap="deleteBtn">删除</button>
+    </view>
+    <view class="shopList">
+      <view class="shopBox" a:for="{{goods}}" a:key="*this">
+        <view class="goodsChoose">
+          <view class="chooseBox {{item.checked? 'active' : ''}}" data-index="{{index}}" onTap="goodsChoose" />
+        </view>
+        <view class="goodsImg">
+          <image mode="scaleToFill" src="{{item.thumbnail}}"/>
+        </view>
+        <view class="goodsContent">
+          <view class="goodsTitle">{{item.product_name}}</view>
+          <view class="goodsLabel">规格：{{item.opt_text}}</view>
+          <view class="goodsPrice">¥{{item.product_price}}</view>
+        </view>
+        <view class="number">
+          <view class="numberBox">
+            <view class="numberPrev" data-index="{{index}}" onTap="numberLess">
+              <image mode="scaleToFill" src="/images/prev.png"/>
+            </view>
+            <!-- <view class="numberShow">{{item.product_number}}</view> -->
+            <input type="number" class="numberShow" data-i="{{index}}" value="{{item.product_number}}" onInput="bindKeyInput"/>
+            <view class="numberPlus" data-index="{{index}}" onTap="numberPlus">
+              <image mode="scaleToFill" src="/images/plus.png"/>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="shopTotal">
+      <view class="totalTxt">合计：</view>
+      <view class="totalPrice">¥{{totalPrice}}</view>
+      <button class="orderBtn" hover-class="none" catchTap="confirmBtn">下单</button>
+    </view>
+  </view>
+</view>
+<view class="popu" a:if="{{isOpen == 0}}">
+  <view class="popuText">休息中...</view>  
+</view>

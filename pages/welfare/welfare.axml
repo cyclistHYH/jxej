@@ -1,0 +1,91 @@
+<view class="container">
+  <view class="yellowBg"></view>
+    <view class="check">
+      <view class="checkTitle">
+        <view class="today">
+          本周已签到<view class="colorRed">{{allDay_length}}天</view>
+        </view>
+        <view class="week">
+          已赚取<view class="colorRed">{{oneWeek}}</view>积分
+        </view>
+      </view>
+      <view class="time">
+        <view class="line"></view>
+          <view class="timeLine">
+          <view class="perDay {{allDay[0].d1==true?'active':''}}">
+            <!-- <view class="shang">+{{jifen}}</view> -->
+            <view class="xia">一</view>
+          </view>
+          <view class="perDay {{allDay[1].d2==true?'active':''}}">
+            <!-- <view class="shang">+{{jifen}}</view> -->
+            <view class="xia">二</view>
+          </view>
+          <view class="perDay {{allDay[2].d3==true?'active':''}}">
+            <!-- <view class="shang">+{{jifen}}</view> -->
+            <view class="xia">三</view>
+          </view>
+          <view class="perDay {{allDay[3].d4==true?'active':''}}">
+            <!-- <view class="shang">+{{jifen}}</view> -->
+            <view class="xia">四</view>
+          </view>
+          <view class="perDay {{allDay[4].d5==true?'active':''}}">
+            <!-- <view class="shang">+{{jifen}}</view> -->
+            <view class="xia">五</view>
+          </view>
+          <view class="perDay {{allDay[5].d6==true?'active':''}}">
+            <!-- <view class="shang">+{{jifen}}</view> -->
+            <view class="xia">六</view>
+          </view>
+          <view class="perDay {{allDay[6].d7==true?'active':''}}">
+            <!-- <view class="shang">+{{jifen}}</view> -->
+            <view class="xia">七</view>
+          </view>
+        </view>
+      </view>
+      <view class="checkBtn" onTap="qiandao">
+        签到领金币
+      </view>
+    </view>
+    <view class="task">
+      <view class="taskTitle">积分任务</view>
+      <view class="taskList">
+        <view class="taskIcon taskIcon1"></view>
+        <view class="taskContent">
+          <view class="taskCs">每日签到</view>
+          <!-- <view class="taskCx">积分+10</view> -->
+        </view>
+        <navigator class="taskBtn" url="/pages/welfare/welfare" hidden="{{isOver==0?false:true}}">去完成</navigator>
+        <view class="taskBtn" hidden="{{isOver==1?false:true}}" style="background:#666">已签到</view>
+      </view>
+      <view class="taskList" hidden="{{true}}">
+        <view class="taskIcon taskIcon2"></view>
+        <view class="taskContent">
+          <view class="taskCs">邀请会员</view>
+          <!-- <view class="taskCx">积分+10</view> -->
+        </view>
+        <navigator class="taskBtn" url="/pages/">去完成</navigator>
+      </view>
+      <view class="taskList last" hidden="{{true}}">
+        <view class="taskIcon taskIcon3"></view>
+        <view class="taskContent">
+          <view class="taskCs">购买商品</view>
+          <!-- <view class="taskCx">积分+10</view> -->
+        </view>
+        <navigator class="taskBtn" url="/pages/index/index">去完成</navigator>
+      </view>
+    </view>
+    <view class="ruler">
+      <view class="rulerTitle">签到规则</view>
+      <rich-text id="rich-text" type="text" nodes="{{rule}}"></rich-text>
+    </view>
+</view>
+
+<view class="pop" hidden="{{isShow}}">
+  <view class="popMain">
+    <view class="popTitle">{{message}}</view>
+    <!-- <view class="popJifen">+{{jifen}}积分</view> -->
+    <image mode="scaleToFill" src="/images/check.png" class="popImg"/>
+    <view class="popTip">本周您已签到<view style="display: inline; color: #f00">{{allDay_length}}</view>天哦</view>
+    <view class="popBtn" onTap="toClose">我知道了</view>
+  </view>
+</view>

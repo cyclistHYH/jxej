@@ -1,0 +1,55 @@
+<!-- <import src="../../wxParse/wxParse.axml"/> -->
+<view class="container">
+  <view class="spikeDetails">
+      <swiper indicator-dots="{{false}}" autoplay="true" duration="500" interval="1500" circular="true" class="imgShow">
+        <block a:for="{{album}}">
+          <swiper-item>
+            <view class="imgs">
+              <image mode="scaleToFill" src="{{item}}"/>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="prices">
+        <view class="newPrice">￥{{activity_price}}</view>
+        <view class="oldPrice">￥{{original_price}}</view>
+        <view class="lastTime">{{goods.max_peo_num}}人团 | 节省￥<view class="span">{{original_price-activity_price}}</view></view>
+      </view>
+      <view class="des">
+        <view class="desTitle">{{product_name}}</view>
+      </view>
+			<rich-text type="text" nodes="{{content}}" class="richContent"></rich-text>
+      <view class="footer">
+        <navigator url="/pages/shopCart/shopCart" class="fIcon"></navigator>
+        <view class="buy" onTap="groupBuy">拼团购买</view>
+      </view>
+  </view>
+</view>
+
+<view class="popUpBk" hidden="{{!isShow}}" catchTap="toClose"></view>
+  <view class="popUp" hidden="{{!isShow}}">
+    <image class="close" mode="scaleToFill" onTap="toClose" src="/images/close.png"/>
+    <view class="popUpInfo">
+      <image class="popUpImg" mode="scaleToFill" src="{{goods.thumbnail}}"/>
+      <view class="popUpInfoRight">
+        <view class="popUpPrice">¥{{activity_price}}<view class="popUpStock">库存：{{stock}}</view></view>
+        <view class="popUpLabel">已选：{{opt_text}} {{opt_text1}}</view>
+      </view>
+    </view>
+
+  <view class="popUpScroll">
+    <view class="popUpNumber">
+      <view class="numberTxt">数量</view>
+      <view class="numberBox">
+        <view class="numberLess" onTap="numberLess">
+          <image mode="scaleToFill" src="/images/prev.png"/>
+        </view>
+        <input type="number" class="numberShow" value="{{buyQuantity}}" onInput="bindKeyInput"/>
+        <view class="numberPlus" onTap="numberPlus">
+          <image mode="scaleToFill" src="/images/plus.png"/>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="confirmBtn" type="primary" catchTap="confirmBtn">确认</button>
+</view>

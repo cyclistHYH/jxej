@@ -1,0 +1,80 @@
+<view class="container">
+  <navigator class="search" url="/pages/search/search" hover-class="none">
+    <image class="searchImg" src="/images/magnifier.png"></image>
+    <view class="searchTxt">搜索商品</view>
+  </navigator>
+  <view class="carouselWrap">
+    <swiper indicator-dots="{{false}}" autoplay="true" duration="500" interval="5000" class="carousel" circular="true" onChange="swiperChange">
+      <block a:for="{{carousel}}">
+        <swiper-item>
+          <navigator url="/pages/productDetails/productDetails?id={{item.brinding_pro}}" class="carouselBox">
+            <image mode="scaleToFill" src="{{item.url}}"></image>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block a:for="{{carousel}}">
+        <view class="dot {{activeSwiper==index? 'active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <view class="mainNav">
+    <navigator class="mainNavBox" url="/pages/spike/spike">
+      <image class="mainNavImg" src="/images/mainNavImg1.png"></image>
+      <view class="mainNavTxt">秒杀</view>
+    </navigator>
+    <navigator class="mainNavBox" url="/pages/fightGroup/fightGroup">
+      <image class="mainNavImg" src="/images/mainNavImg2.png"></image>
+      <view class="mainNavTxt">拼团</view>
+    </navigator>
+    <navigator class="mainNavBox" url="/pages/hotSale/hotSale">
+      <image class="mainNavImg" src="/images/mainNavImg3.png"></image>
+      <view class="mainNavTxt">热销</view>
+    </navigator>
+    <navigator class="mainNavBox" url="/pages/pointsMall/pointsMall">
+      <image class="mainNavImg" src="/images/mainNavImg4.png"></image>
+      <view class="mainNavTxt">积分商城</view>
+    </navigator>
+  </view>
+  <view class="advert">
+    <swiper id="advSwiper" autoplay="{{true}}" vertical="{{true}}" circular="true" interval="2500">
+      <block>
+        <swiper-item class="swiper-item">
+          <view class="advItem">{{pao.comment}}</view>
+        </swiper-item>
+        <swiper-item class="swiper-item">
+          <view class="advItem">
+            <rich-text type="text" nodes="{{pao.content}}"></rich-text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="recommend">
+    <view class="recommendTxt">推荐商品</view>
+    <navigator class="recommendMore" url="/pages/product/product">
+      <view class="recommendMoreTxt">更多</view>
+      <image class="recommendArrow" src="/images/recommendArrow.png"></image>
+    </navigator>
+  </view>
+  <view class="product">
+    <navigator a:for="{{product}}" class="productBox" a:key="*this" url="/pages/productDetails/productDetails?id={{item.id}}">
+      <view class="productImg">
+        <image mode="scaleToFill" src="{{item.thumbnail}}" lazyLoad="{{true}}"></image>
+      </view>
+      <view class="productTitleBox">
+        <view class="productTitle">{{item.product_name}}</view>
+        <view class="productVolume">销量 {{item.sales_volume}}</view>
+      </view>
+      <view class="priceBox">
+        <view class="currentPrice">¥{{item.price}}</view>
+        <!-- <view class="priceTxt">起</view> -->
+        <view class="originalPrice">¥{{item.market_price}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view a:if="{{isOpen == 0}}" class="popu">
+  <view class="popuText">休息中...</view>
+</view>

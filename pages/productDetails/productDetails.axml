@@ -1,0 +1,68 @@
+<!-- <import src="../../wxParse/wxParse.axml"/> -->
+<scroll-view class="container" scroll-y="{{!isShow}}">
+  <view class="carouselWrap">
+    <swiper indicator-dots="{{false}}" autoplay="{{false}}" onChange="swiperChange" class="carousel">
+      <block a:for="{{album}}">
+        <swiper-item >
+          <view class="carouselBox">
+            <image mode="scaleToFill" src="{{item}}"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- <view class="dots">{{current}}/{{carousel.length}}</view> -->
+  </view>
+  <view class="goodsInfo">
+    <view class="goodsInfoTop">
+      <view class="goodsPrice">¥{{goods.price}}</view>
+      <!-- <view class="goodsInfoTopTxt">起</view> -->
+      <view class="goodsVolume">销量 {{goods.sales_volume}}</view>
+    </view>
+    <view class="goodsName">{{goods.product_name}}</view>
+  </view>
+	<rich-text id="rich-text" type="text" nodes="{{content}}" class="richContent"></rich-text>
+  <view class="goodsBottom">
+    <navigator class="customer" url="/pages/shopCart/shopCart"></navigator>
+    <button class="addShop" type="primary" hover-class="none" onTap="toAddShop">加入购物车</button>
+    <button class="buyBtn" type="primary" hover-class="none" onTap="toBuy">立即购买</button>
+  </view>
+</scroll-view>
+
+<view class="popUpBk" hidden="{{!isShow}}" catchTap="toClose"></view>
+<view class="popUp" hidden="{{!isShow}}">
+  <image class="close" mode="scaleToFill" onTap="toClose" src="/images/close.png"/>
+  <view class="popUpInfo">
+    <image class="popUpImg" mode="scaleToFill" src="{{goods.thumbnail}}"/>
+    <view class="popUpInfoRight">
+      <view class="popUpPrice">¥{{opt_price}}<view class="popUpStock">库存：{{stock}}</view></view>
+      <view class="popUpLabel">已选：{{opt_text}} {{opt_text1}}</view>
+    </view>
+  </view>
+  <view class="popUpScroll">
+    <view class="popUpNumber">
+      <view class="numberTxt">数量</view>
+      <view class="numberBox">
+        <view class="numberLess" onTap="numberLess">
+          <image mode="scaleToFill" src="/images/prev.png"/>
+        </view>
+        <input type="number" class="numberShow" value="{{buyQuantity}}" onInput="bindKeyInput"/>
+        <view class="numberPlus" onTap="numberPlus">
+          <image mode="scaleToFill" src="/images/plus.png"/>
+        </view>
+      </view>
+    </view>
+    <view class="popUpLabel">
+      <view class="popUpLabelTxt">{{goods.goods_optional[0].name}}</view>
+      <view class="popUpLabelBox">
+        <view class="labelBox {{currentLabel==index? 'active' : ''}}" a:for="{{goods.goods_optional[0].opt_text}}" a:key="*this" data-index="{{index}}" catchTap="labelItemTap">{{item}}</view>
+      </view>
+    </view>
+    <view class="popUpLabel">
+      <view class="popUpLabelTxt">{{goods.goods_optional[1].name}}</view>
+      <view class="popUpLabelBox">
+        <view class="labelBox {{currentLabel1==index? 'active' : ''}}" a:for="{{goods.goods_optional[1].opt_text}}" a:key="*this" data-index="{{index}}" catchTap="labelItemTap1">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <button class="confirmBtn" type="primary" catchTap="confirmBtn">确认</button>
+</view>

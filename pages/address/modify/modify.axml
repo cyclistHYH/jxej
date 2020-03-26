@@ -1,0 +1,35 @@
+<view class="container">
+  <form onSubmit="toModify">
+    <view class="uploadBox">
+      <view class="uploadTxt">收货人</view>
+      <input class="uploadInp" placeholder="请输入姓名" name="name" value="{{name}}" placeholder-class="inputPlace" />
+    </view>
+    <view class="uploadBox">
+      <view class="uploadTxt">联系电话</view>
+      <input class="uploadInp" placeholder="请输入电话号码" name="phone" type="tel" maxlength="11" value="{{phone}}" placeholder-class="inputPlace" />
+    </view>
+    <view class="uploadBox">
+      <view class="uploadTxt">所在地区</view>
+      <view class="cityChoose" onTap="cityChoose">
+        <view class="cityRemind" a:if="{{isRemind}}">请选择地区</view>
+        <view class="cityChooseShow" a:else>{{provinces}}{{city}}{{area}}</view>
+        <image class="cityChooseImg" src="/images/addressArrow.png"/>
+      </view>
+    </view>
+    <view class="textareaBox">
+      <view class="textareaBoxTxt">详细地址</view>
+      <textarea class="textareaInp" placeholder="请输入详细地址" name="addDetails" value="{{addDetails}}" placeholder-class="inputPlace" show-count="{{false}}" maxlength="-1" />
+    </view>
+    <view class="defaultBox">
+      <view class="defaultTxt">设置为默认地址</view>
+      <switch class="defaultBtn" onChange="toDefault" checked="{{isDefault}}" color="#fa8e2f" name="isDefault" />
+    </view>
+    <view class="delete">
+      <view class="deleteBox" onTap="toDelete">
+        <image class="deleteImg" src="/images/deleteBtn.png"/>
+        <view class="deleteTxt">删除该地址</view>
+      </view>
+    </view>
+    <button class="saveBtn" form-type="submit" type="primary" hover-class="none">保存</button>
+  </form>
+</view>

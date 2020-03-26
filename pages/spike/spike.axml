@@ -1,0 +1,38 @@
+<view class="container">
+  <view hidden="{{isShow}}" class="noUse">暂无活动</view>
+  <view class="spike">
+    <navigator a:for="{{spike}}" class="spikeBox" a:key="*this" url="/pages/spikeDetails/spikeDetails?id={{item.id}}">
+      <view class="spikeImgBox">
+        <image class="spikeImg" mode="scaleToFill" src="{{item.thumbnail}}" lazyLoad="{{true}}"></image>
+        <view class="countdown" data-timer="{{item.end_date}}">
+          <view class="countdownTxt activeOver" hidden="{{item.isOver==1?false:true}}">活动结束</view>
+          <view class="countdownTxt activeOver" hidden="{{item.isOver==2?false:true}}">已售罄</view>
+          <view class="countdownTxt" hidden="{{item.isOver==-1?false:true}}">距开始</view>
+          <view class="countdownTxt" hidden="{{item.isOver==0?false:true}}">距结束</view>
+          <view hidden="{{item.isOver==0||item.isOver==-1?false:true}}">
+            <view class="countdownNumber">{{item.hh}}</view>
+            <view class="countdownT">:</view>
+            <view class="countdownNumber">{{item.mm}}</view>
+            <view class="countdownT">:</view>
+            <view class="countdownNumber">{{item.ss}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="spikeContent">
+        <view class="spikeTitle">
+          <view>{{item.product_name}}</view>
+          <view>剩余：{{item.people_num}}</view>
+        </view>
+        <view class="spikePrice">
+          <view class="spikePriceTxt">秒杀价：</view>
+          <view class="currentPrice">¥{{item.activity_price}}</view>
+          <view class="originalPrice">¥{{item.original_price}}</view>
+        </view>
+        <view class="immediateBtn" hidden="{{item.isOver==-1?false:true}}">未开始</view>
+        <view class="immediateBtn" hidden="{{item.isOver==0?false:true}}">立即秒杀</view>
+        <view class="immediateBtn" onTap="activeOver" hidden="{{item.isOver==1?false:true}}" style="background:#666">秒杀结束</view>
+        <view class="immediateBtn" onTap="activeOver" hidden="{{item.isOver==2?false:true}}" style="background:#666">已售罄</view>
+      </view>
+    </navigator>
+  </view>
+</view>

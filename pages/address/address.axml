@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="main" hidden="{{!isNull}}">
+    <image class="addressEmpty" mode="scaleToFill" src="/images/addressEmpty.jpg"/>
+  </view>
+  <view class="main" hidden="{{isNull}}" style="padding-top: 8rpx;">
+    <view class="addressBox" a:for="{{address}}" a:key="*this" data-id="{{item.address_id}}" onTap="{{addressClick}}">
+      <view class="addressLeft">
+        <view class="addressName">{{item.consignee}}</view>
+        <view class="addressDefault" a:if="{{item.is_default==1}}">默认</view>
+      </view>
+      <view class="addressCon">
+        <view class="addressPhone">
+          <view class="addressPhoneTxt">{{item.mobile}}</view>
+          <view class="modify" data-id="{{item.address_id}}" catchTap="toModify">
+            <image class="modifyImg" src="/images/addressModify.png"/>
+            <view class="modifyTxt">修改</view>
+          </view>
+        </view>
+        <view class="addressTxt">{{item.province}}{{item.city}}{{item.district}}{{item.address}}</view>
+      </view>
+      <image class="isChoose" src="/images/checkedImg.png" a:if="{{item.isChoose}}"/>
+    </view>
+  </view>
+  <navigator class="addBtn" url="/pages/address/add/add" hover-class="none">添加地址</navigator>
+</view>

@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="coupon" a:for="{{list}}">
+    <view class="left">
+      <view class="ls">
+        <view style="font-size: 20rpx;display: inline;">￥</view>{{item.money}}
+      </view>
+      <view class="lx">无金额门槛</view>
+    </view>
+    <view class="right">
+      <view class="rl">
+        <view class="rls">{{item.name}}</view>
+        <view class="rlx">
+          <!-- <view style="color: #f66447;display: inline;">到期时间</view>
+          <view>{{item.create_time}}--{{item.expried_time}}</view> -->
+        </view>
+      </view>
+      <view class="rr" onTap="getting" data-type="{{item.id}}" hidden="{{item.is_receive==0?false:true}}">领取</view>
+      <view class="rr" onTap="getted" hidden="{{item.is_receive==1?false:true}}" style="background:#666">已领取</view>
+    </view>
+  </view>
+</view>

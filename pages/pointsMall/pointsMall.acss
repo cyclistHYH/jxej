@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #fdfdfd;
+}
+
+.pointsMall {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx 34rpx;
+}
+
+.mallBox {
+  width: 332rpx;
+  height: 504rpx;
+  margin-bottom: 24rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+
+.mallImgBox {
+  position: relative;
+  width: 100%;
+  height: 324rpx;
+  overflow: hidden
+}
+
+.mallImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mallContent {
+  width: 100%;
+  height: 180rpx;
+  overflow: hidden;
+  padding: 12rpx 10rpx;
+}
+
+.mallTitle {
+  width: 100%;
+  height: 40rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #333333;
+}
+
+.mallPrice {
+  display: flex;
+  width: 100%;
+  height: 36rpx;
+}
+
+.mallPriceTxt {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  font-weight: 600;
+  color: #f66447;
+}
+
+.integralPrice {
+  font-size: 28rpx;
+  line-height: 36rpx;
+  font-weight: bold;
+  color: #f66447;
+}
+
+.mallStock {
+  min-width: 124rpx;
+  height: 28rpx;
+  font-size: 18rpx;
+  line-height: 28rpx;
+  color: #666666;
+  background-color: #eeeeee;
+  border-radius: 12rpx;
+  padding: 0 14rpx;
+  margin-left: 16rpx;
+  margin-top: 4rpx;
+}
+
+.immediateBtn {
+  width: 140rpx;
+  height: 50rpx;
+  font-size: 22rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 22rpx;
+  background-color: #f99646;
+  margin-top: 14rpx;
+}

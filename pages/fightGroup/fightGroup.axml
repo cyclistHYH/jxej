@@ -1,0 +1,19 @@
+<view class="container">
+  <view hidden="{{isShow}}" class="noUse">暂无活动</view>
+  <view class="spike">
+    <navigator a:for="{{goods}}" class="spikeBox" a:key="*this" url="/pages/fightGroupDetails/fightGroupDetails?id={{item.id}}">
+      <view class="spikeImgBox">
+        <image class="spikeImg" mode="scaleToFill" src="{{item.thumbnail}}" lazyLoad="{{true}}"></image>
+      </view>
+      <view class="spikeContent">
+        <view class="spikeTitle">{{item.product_name}}</view>
+        <view class="spikePrice">
+          <view class="spikePriceTxt">{{item.max_peo_num}}人团：</view>
+          <view class="currentPrice">¥{{item.activity_price}}</view>
+          <view class="originalPrice">¥{{item.original_price}}</view>
+        </view>
+        <view class="immediateBtn">立即拼团</view>
+      </view>
+    </navigator>
+  </view>
+</view>

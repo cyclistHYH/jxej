@@ -1,0 +1,299 @@
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: #fbfbfb;
+  padding-bottom: 90rpx;
+}
+
+.addressBox {
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  padding: 0 30rpx;
+  margin-bottom: 24rpx;
+}
+
+.addressNull {
+  float: left;
+  font-size: 32rpx;
+  line-height: 150rpx;
+  color: #333333;
+}
+
+.addressArrow {
+  float: right;
+  width: 14rpx;
+  height: 24rpx;
+  margin-top: 58rpx;
+}
+
+.addressLeft {
+  float: left;
+  height: 100%;
+  padding-top: 4rpx;
+}
+
+.addressName {
+  font-size: 32rpx;
+  line-height: 68rpx;
+  color: #000000;
+}
+
+.addressDefault {
+  width: 66rpx;
+  height: 32rpx;
+  font-size: 20rpx;
+  line-height: 32rpx;
+  text-align: center;
+  color: #000000;
+  background-color: #fdd544;
+  border-radius: 4rpx;
+}
+
+.addressCon {
+  float: left;
+  width: 460rpx;
+  height: 100%;
+  padding-top: 24rpx;
+  margin-left: 38rpx;
+}
+
+.addressPhone {
+  width: 100%;
+  height: 28rpx;
+}
+
+.addressPhoneTxt {
+  float: left;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #333333;
+}
+
+.addressTxt {
+  width: 100%;
+  height: 60rpx;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #999999;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  margin-top: 14rpx;
+}
+
+.goodsBox {
+  width: 100%;
+  height: 220rpx;
+  background-color: #fff;
+  padding: 0 34rpx;
+  margin-bottom: 24rpx; 
+}
+
+.goodsImg {
+  float: left;
+  width: 160rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.goodsImg image {
+  display: block;
+  width: 160rpx;
+  height: 156rpx;
+}
+
+.goodsContent {
+  float: right;
+  width: 498rpx;
+  height: 100%;
+  padding-top: 26rpx;
+}
+
+.goodsTitle {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  color: #333333;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  margin-bottom: 16rpx;
+}
+
+.goodsLabel {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #666666;
+  margin-bottom: 44rpx;
+}
+
+.goodsConBox {
+  width: 100%;
+  height: 32rpx;
+}
+
+.goodsPrice {
+  float: left;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  font-weight: bold;
+  color: #f66447;
+}
+
+.goodsQuantity {
+  float: right;
+  font-size: 22rpx;
+  line-height: 32rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.messageBox {
+  width: 100%;
+  height: 104rpx;
+  background-color: #fff;
+  padding: 0 34rpx;
+  margin-bottom: 24rpx;
+}
+
+.messageTxt {
+  float: left;
+  font-size: 24rpx;
+  line-height: 104rpx;
+  color: #333333;
+}
+
+.messageInp {
+  float: left;
+  width: 480rpx;
+  height: 100%;
+  font-size: 24rpx;
+  line-height: 104rpx;
+  color: #333;
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 20rpx 34rpx;
+  margin-bottom: 20rpx;
+}
+
+.freight {
+  width: 100%;
+  height: 42rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 5rpx;
+}
+
+.freightTxt {
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #666666;
+}
+.canfree{
+	font-size: 24rpx;
+  line-height: 42rpx;
+  color: #666666;
+}
+.freightPrice {
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #333;
+}
+.radio-group{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end
+}
+.radio{
+  margin-left: 10rpx;
+}
+radio{
+  zoom: 0.6
+}
+.coupon {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 20rpx 34rpx;
+}
+
+.couponFre {
+  width: 100%;
+  height: 42rpx;
+}
+
+.couponTxt {
+  float: left;
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #666666;
+}
+
+.couponTip{
+  width: 200rpx;
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #f66447;
+  margin-left: 200rpx;
+  float: left
+}
+
+.couponPrice {
+  float: right;
+	width: 20rpx;
+	height: 41rpx;
+	background: url("/images/recommendArrow.png") 0 12rpx/70% no-repeat;
+}
+
+.totalBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  border-top: 2rpx solid #ededed;
+  z-index: 1000;
+  background: #fff
+}
+
+.confirmBtn {
+  float: right;
+  width: 240rpx;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  color: #fff;
+  background-color: #fa8e2f;
+}
+
+.totalPrice {
+  float: right;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  font-weight: bold;
+  color: #f66447;
+  margin-right: 40rpx;
+}
+
+.totalTxt {
+  float: right;
+  font-size: 24rpx;
+  line-height: 88rpx;
+  color: #333;
+}

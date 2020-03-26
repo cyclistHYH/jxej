@@ -1,0 +1,41 @@
+<!--<import src="../../wxParse/wxParse.axml"/> -->
+<view class="container">
+  <view class="spikeDetails">
+    <swiper indicator-dots="{{false}}" autoplay="true" duration="500" interval="1500" circular="true" class="imgShow">
+      <block a:for="{{album}}">
+        <swiper-item>
+          <view class="imgs">
+            <image mode="scaleToFill" src="{{item}}"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="prices">
+      <view class="newPrice">￥{{activity_price}}</view>
+      <view class="oldPrice">￥{{original_price}}</view>
+      <view class="lastTime" hidden="{{isOver==1?false:true}}">活动结束</view>
+      <view class="lastTime" hidden="{{isOver==2?false:true}}">已售罄</view>
+      <view class="lastTime" hidden="{{isOver==-1?false:true}}">距离开始：
+        <view class="span">{{date.hh}}</view>:
+        <view class="span">{{date.mm}}</view>:
+        <view class="span">{{date.ss}}</view>
+      </view>
+      <view class="lastTime" hidden="{{isOver==0?false:true}}">距离结束：
+        <view class="span">{{date.hh}}</view>:
+        <view class="span">{{date.mm}}</view>:
+        <view class="span">{{date.ss}}</view>
+      </view>
+    </view>
+    <view class="des">
+      <view class="desTitle">{{product_name}}</view>
+    </view>
+    <rich-text type="text" nodes="{{content}}" class="richContent"></rich-text>
+    <view class="footer">
+      <navigator url="/pages/shopCart/shopCart" class="fIcon"></navigator>
+      <view class="buy" hidden="{{isOver==-1?false:true}}" style="background:#666">未开始</view>
+      <view class="buy" onTap="fastBuy" hidden="{{isOver==0?false:true}}">立即秒杀</view>
+      <view class="buy" onTap="activeOver" hidden="{{isOver==1?false:true}}" style="background:#666">秒杀结束</view>
+      <view class="buy" onTap="activeOver" hidden="{{isOver==2?false:true}}" style="background:#666">已售罄</view>
+    </view>
+  </view>
+</view>

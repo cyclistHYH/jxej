@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="activity">
+    <view class="goods">
+      <image mode="scaleToFill" src="{{pinData.thumbnail}}" class="goodsImg"/>
+      <view class="goodsRight">
+        <view class="grS">
+          <view class="grsTitle">{{pinData.product_name}}</view>
+          <!-- <view class="grsDes">商品描述</view> -->
+        </view>
+        <view class="grX">
+          <view class="price">
+            <view class="newPrice">￥{{pinData.activity_price}}</view>
+            <view class="oldPrice">￥{{pinData.original_price}}</view>
+          </view>
+          <view class="youhui">
+            <view class="num">{{pinData.max_peo_num}}人团</view>
+            <view class="chep">节省￥{{(pinData.original_price-pinData.activity_price)>=0?(pinData.original_price-pinData.activity_price):0}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="time">
+      <view class="daojishi">
+        <view class="djsTitle" hidden="{{isOver==1?false:true}}">—— 已结束 ——</view>
+        <view class="djsTitle" hidden="{{isOver==0?false:true}}">—— 距结束 ——</view>
+        <view class="djsCon">
+          <view class="redBg">{{date.hh}}</view>:
+          <view class="redBg">{{date.mm}}</view>:
+          <view class="redBg">{{date.ss}}</view>
+        </view>
+      </view>
+      <view class="txt"><view class="red">{{pinData.max_peo_num}}</view>人成团，还差<view class="red">{{pinData.people_num}}</view>人，可拼团成功 快邀请好友来参团吧！</view>
+    </view>
+    <view class="btn" onTap="shareOver" hidden="{{isOver==1?false:true}}" style="background:#666">邀请好友参团</view>
+    <view class="btn" onTap="share" hidden="{{isOver==0?false:true}}">邀请好友参团</view>
+    <view class="tishi">邀请好友参团 > 拼团成功分别发货 > 拼团失败自动退款</view>
+  </view>
+</view>

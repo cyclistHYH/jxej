@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="searchBox">
+    <input class="searchInp" placeholder="搜索商品" placeholder-class="inputPlace" value="{{searchVal}}" focus="{{focus}}" onInput="searchChange" onConfirm="toSearch"></input>
+    <image class="searchImg" src="/images/magnifier.png"></image>
+  </view>
+  <view class="searchCon" hidden="{{!isNull}}">
+    <view class="searchConTop">
+      <view class="searchTitle">大家都在搜</view>
+    </view>
+    <view class="searchConList">
+      <view a:for="{{hotSearch}}" class="searchConBox" a:key="*this" data-val="{{item}}" catchTap="searchClick">{{item}}</view>
+    </view>
+  </view>
+  <view class="searchCon" hidden="{{!isNull}}">
+    <view class="searchConTop">
+      <view class="searchTitle">历史搜索</view>
+      <image a:if="{{historySearch.length>0}}" class="deleteBtn" catchTap="clearBtn" src="/images/deleteBtn.png"></image>
+    </view>
+    <view class="searchConList">
+      <view a:for="{{historySearch}}" class="searchConBox" a:key="*this" data-val="{{item}}" catchTap="searchClick">{{item}}</view>
+    </view>
+  </view>
+  <view class="product" hidden="{{isNull}}">
+    <navigator a:for="{{product}}" class="productBox" a:key="*this" open-type="redirect" url="/pages/productDetails/productDetails?id={{item.id}}">
+      <view class="productImg">
+        <image mode="scaleToFill" src="{{item.thumbnail}}" lazyLoad="{{true}}"></image>
+      </view>
+      <view class="productTitleBox">
+        <view class="productTitle">{{item.product_name}}</view>
+        <view class="productVolume">销量 {{item.sales_volume}}</view>
+      </view>
+      <view class="priceBox">
+        <view class="currentPrice">¥{{item.price}}</view>
+        <view class="priceTxt">起</view>
+        <view class="originalPrice">¥{{item.market_price}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

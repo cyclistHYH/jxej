@@ -1,0 +1,77 @@
+<view class="container">
+  <view class="orderTop">
+    <view class="orderTopTit" a:if="{{order.order_status==1}}">等待买家付款</view>
+    <view class="orderTopTit" a:if="{{order.order_status==2}}">等待卖家发货</view>
+    <view class="orderTopTit" a:if="{{order.order_status==3}}">等待买家收货</view>
+    <view class="orderTopTit" a:if="{{order.order_status==5}}">您的订单已完成</view>
+    <view class="orderTopTit" a:if="{{order.order_status==0}}">您的订单已取消</view>
+    <view class="orderTopTxt" a:if="{{order.order_status==2}}">您的包裹正整装待发</view>
+  </view>
+  <view class="addressBox">
+    <view class="addressLeft">
+      <view class="addressName">{{order.consignee}}</view>
+      <!--<view a:if="{{address.is_default==1}}" class="addressDefault">默认</view> -->
+    </view>
+    <view class="addressCon">
+      <view class="addressPhone">
+        <view class="addressPhoneTxt">{{order.mobile}}</view>
+      </view>
+      <view class="addressTxt">{{order.province}}{{order.city}}{{order.district}}{{order.address}}</view>
+    </view>
+  </view>
+  <view class="orderInfo">
+    <view class="orderInfoTop">
+      <view>包裹</view>
+      <view a:if="{{order.order_status==0}}">已取消</view>
+      <view a:if="{{order.order_status==1}}">待付款</view>
+      <view a:if="{{order.order_status==2}}">待发货</view>
+      <view a:if="{{order.order_status==3}}">待收货</view>
+      <view a:if="{{order.order_status==5}}">已完成</view>
+    </view>
+    <view a:for="{{order.orderGoods}}" a:for-item="goods" a:key="*this" class="goodsBox">
+      <view class="goodsImg">
+        <image mode="scaleToFill" src="{{goods.thumbnail}}"></image>
+      </view>
+      <view class="goodsContent">
+        <view class="goodsTitle">{{goods.goods_name}}</view>
+        <view class="goodsLabel">{{goods.content}}</view>
+        <view class="goodsConBox">
+          <view class="goodsPrice">¥{{goods.goods_price}}</view>
+          <view class="goodsQuantity">×{{goods.goods_number}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="orderInfoTop" style="margin-top:20rpx;">
+      <view>商品总额：</view>
+      <view style="color: #f66447;font-weight: bold;">¥{{order.order_money}}</view>
+    </view>
+    <view class="orderInfoTop">
+      <view>运费：</view>
+      <view>免运费</view>
+    </view>
+  </view>
+  <view class="messageBox">
+    <view class="messageTxt">买家留言：</view>
+    <input class="messageInp" value="{{order.remarks}}" maxlength="100" disabled="{{true}}"/>
+  </view>
+  <view class="totalBox">
+    <view class="totalTop">
+      <view class="totalTxt">总计</view>
+      <view class="totalPrice">¥{{order.order_money}}</view>
+    </view>
+    <view class="orderInfoTop" style="margin-bottom: 12rpx;">
+      <view>订单编号：</view>
+      <view>{{order.order_sn}}</view>
+    </view>
+    <view class="orderInfoTop">
+      <view>创建时间：</view>
+      <view>{{order.created_date}}</view>
+    </view>
+  </view>
+  <view class="orderButton" a:if="{{order.order_status!=0&&order.order_status!=5}}">
+    <button class="orderBtn" type="primary" a:if="{{order.order_status==1}}" catchTap="payBtn" data-id="{{order.order_id}}" plain="{{true}}">付款</button>
+    <!-- <button class="cancelBtn" type="primary" a:if="{{order.order_status==1}}" data-id="{{order.order_id}}" catchTap="toCancel" plain="{{true}}">取消订单</button> -->
+    <button class="orderBtn" type="primary" a:if="{{order.order_status==3}}" data-id="{{order.order_id}}" catchTap="confirmBtn" plain="{{true}}">确认收货</button>
+    <button class="deleteBtn" type="primary" a:if="{{order.order_status==2 || order.order_status==3}}" catchTap="express" plain="{{true}}">查看物流</button>
+  </view>
+</view>

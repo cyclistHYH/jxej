@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 12rpx;
+  padding-bottom: 100rpx;
+  background: #fafafa;
+}
+
+.imgs image{
+  width: 750rpx;
+  height: 452rpx;
+  margin: 0%;
+  padding: 0%;
+  display: block;
+}
+
+.prices{
+  background: url(../../images/spike-bg.png) no-repeat left top;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 96rpx;
+  margin: 0rpx;
+  padding: 20rpx 20rpx;
+}
+.newPrice{
+  font: bold 40rpx/56rpx "Microsoft YaHei";
+  color: #fff;
+  float: left;
+  margin-right: 20rpx;
+  border: 1px solid transparent;
+}
+.oldPrice{
+  font: 28rpx/56rpx "Microsoft YaHei";
+  color: #fff;
+  text-decoration: line-through;
+  float: left;
+  border: 1px solid transparent;
+}
+.lastTime{
+  float: right;
+  color: #fff;
+  font: 32rpx/56rpx "Microsoft YaHei";
+  border: 1px solid transparent;
+}
+.lastTime .span{
+  background: #fff;
+  border-radius: 6rpx;
+  color: orange;
+  display: inline;
+  padding: 0 8rpx;
+  border: 1px solid transparent;
+  text-align: center;
+  font: 32rpx/56rpx "Microsoft YaHei";
+}
+.des{
+  width: 100%;
+  /* height: 140rpx; */
+  background: #fff;
+}
+.desTitle{
+  /* height: 140rpx; */
+  font: 32rpx/40rpx "MIcrosoft Yahei";
+  color: #333;
+  padding: 20rpx;
+  border: 1px solid transparent;
+}
+.richContent{
+  font-size: 0;
+  line-height: 0.6rem;
+}
+.footer{
+  width: 100%;
+  height: 100rpx;
+  background: #fa8e2f;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.fIcon{
+  width: 100rpx;
+  height: 100rpx;
+  background: #fff url(../../images/shopCart-on.png) no-repeat center center;
+  background-size: 80% 70%; 
+  float: left;
+}
+.buy{
+  width: 650rpx;
+  height: 100rpx;
+  background: #fa8e2f;
+  color: #fff;
+  font: bold 32rpx/90rpx "Microsoft Yahei";
+  float: right;
+  text-align: center;
+  border: 1px solid transparent;
+}
